@@ -24,18 +24,21 @@ void draw() {
 void scale(int x, int y) {
     //your code here
     fill(10, 200, 100);
-    stroke(0, 50, 20);
+    strokeWeight(4);
+    stroke(153, 255, 219);
     
     if (shift == true)
       //shift scale
-      bezier(x - 40, y + 55, x  - 45, y - 30, x + 45, y - 30, x + 40, y + 55);
+      bezier(x - 40, y + 55, x  - 45, y - 33, x + 45, y - 33, x + 40, y + 55);
     else
-      bezier(x - 40 - 10, y + 55, x  - 45 - 10, y - 30, x + 45 - 10, y - 30, x + 40 - 10, y + 55);
+      bezier(x - 40 - 10, y + 55, x  - 45 - 10, y - 33, x + 45 - 10, y - 33, x + 40 - 10, y + 55);
       //outside scale design
       
     while(j < 60) {
     bezierNum++;
     fill(20 + p, p, 20 + p);
+    strokeWeight(2);
+
     
     //change color of stroke for inside scale
     stroke(255 - (p), 255 - (p * 2), 255 - (p * 3 / 2));
@@ -81,4 +84,5 @@ void scale(int x, int y) {
       shift = false;
     else
       shift = true;
+
 }
